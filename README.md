@@ -1,7 +1,7 @@
 Fun With Triangles
 ==============
 
-A JavaScript web app tells a user what kind of triangle they have after inputing dimensions.
+A JavaScript web app that tells a user what kind of triangle they have after inputing dimensions.
 This app uses JQuery, Mocha, Chai and Bootstrap.
 
 Directions
@@ -14,7 +14,8 @@ Directions
 About
 -----
 
-By Kameron Johnson
+By Kameron Johnson,
+
 JavaScript BDD assessment at Epicodus, Winter 2015
 
 License
