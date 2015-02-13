@@ -6,44 +6,24 @@ var triangleType = function( side1, side2, side3 ) {
     else if ( side1 === side2 && side2 === side3 ) {
       return("Equilateral");
     }
+    else if ( side1 === side2 || side2 === side3 || side1 === side3 ) {
+      return("Isosceles");
+    }
     else if ( side1 !== side2 && side2 !== side3 && side3 !== side1 ) {
       return("Scalene");
     }
-    else if (( side1 === side2 && side2 !== side3) || (side2 === side3 && side3 !== side1) || (side1 === side3 && side3 !== side2)) {
-      return("Isosceles");
-    }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $(document).ready(function() {
-  $("form#name_of_form").submit(function(event) {
+  $("form#triangle-form").submit(function(event) {
 
-      var input1 = $("input#user_input").val();
-      var result = functionName(input1);
+      var input1 = parseInt($("input#user_input1").val());
+      var input2 = parseInt($("input#user_input2").val());
+      var input3 = parseInt($("input#user_input3").val());
+      var result = triangleType(input1, input2, input3);
 
-      $(".user_input").text(input1);
-      $(".result_span").text(result);
+      $(".result").text(result);
 
-      $("#results").show();
       event.preventDefault();
   });
-
 });
